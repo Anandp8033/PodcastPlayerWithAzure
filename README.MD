@@ -13,7 +13,6 @@ This project is a podcast management and playback platform consisting of:
 
 ## Repository Structure
 
-```
 FullStackPodcastWebApp/
 ├── fastapi-auth-app/ # FastAPI Backend
 │ ├── requirements.txt # Python dependencies
@@ -84,8 +83,6 @@ FullStackPodcastWebApp/
 │ ├── main.js
 │ ├── msalConfig.js
 │ └── style.css
-
-```
 
 ## Features
 
