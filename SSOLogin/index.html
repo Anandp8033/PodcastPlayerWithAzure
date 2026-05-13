@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SSO Login with Microsoft Entra ID</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+
+  <body>
+    <main class="app-shell">
+      <section class="card">
+        <h1>Microsoft Entra ID SSO</h1>
+        <p>Login with Microsoft and show your account details.</p>
+
+        <div class="actions">
+          <button id="loginButton" class="primary">Login with Microsoft</button>
+          <button id="logoutButton" class="secondary hidden">Logout</button>
+        </div>
+
+        <div id="status" class="status">Not signed in.</div>
+
+        <div id="profile" class="profile hidden">
+          <h2>User details</h2>
+
+          <dl>
+            <div>
+              <dt>Name</dt>
+              <dd id="userName"></dd>
+            </div>
+
+            <div>
+              <dt>Email</dt>
+              <dd id="userEmail"></dd>
+            </div>
+
+            <div>
+              <dt>Tenant</dt>
+              <dd id="userTenant"></dd>
+            </div>
+
+            <div>
+              <dt>Object ID</dt>
+              <dd id="userObjectId"></dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
