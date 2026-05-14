@@ -4,10 +4,12 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'fastapi-auth-app/**'
 
 env:
-  AZURE_WEBAPP_NAME: podcast-backend-anand   # 🔥 change this
-  WORKING_DIRECTORY: fastapi-auth-app       # 👈 YOUR BACKEND FOLDER
+  AZURE_WEBAPP_NAME: podcast-backend-anand
+  WORKING_DIRECTORY: fastapi-auth-app
   PYTHON_VERSION: '3.10'
 
 jobs:
@@ -15,17 +17,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # ✅ Checkout repo
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # ✅ Setup Python
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
-      # ✅ Install dependencies
       - name: Install dependencies
         working-directory: ${{ env.WORKING_DIRECTORY }}
         run: |
@@ -33,7 +32,6 @@ jobs:
           source venv/bin/activate
           pip install -r requirements.txt
 
-      # ✅ Deploy to Azure
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
