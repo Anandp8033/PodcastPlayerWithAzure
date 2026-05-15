@@ -6,9 +6,11 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     emptyOutDir: true,
-  },
-  server: {
-    port: 3000,
-    open: true,
-  },
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        podcast: 'podcast.html'
+      }
+    }
+  }
 });
