@@ -3,7 +3,7 @@ import { PublicClientApplication } from "@azure/msal-browser";
 // upload Authentication Script
 // ==========================================
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 // ==========================================
 // MSAL Configuration for SSO
@@ -12,7 +12,7 @@ const msalConfig = {
     auth: {
         clientId: import.meta.env.VITE_MSAL_CLIENT_ID,
         authority: import.meta.env.VITE_MSAL_AUTHORITY,
-        redirectUri: "http://localhost:3001",
+        redirectUri: "https://proud-dune-0e720f900.7.azurestaticapps.net",
     },
     cache: {
         cacheLocation: "sessionStorage",
