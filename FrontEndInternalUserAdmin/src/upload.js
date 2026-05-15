@@ -10,7 +10,7 @@ const msalConfig = {
     auth: {
         clientId: import.meta.env.VITE_MSAL_CLIENT_ID,
         authority: import.meta.env.VITE_MSAL_AUTHORITY,
-        redirectUri: "http://localhost:3001",
+        redirectUri: "https://proud-dune-0e720f900.7.azurestaticapps.net",
     },
     cache: {
         cacheLocation: 'sessionStorage',
