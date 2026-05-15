@@ -27,7 +27,7 @@ app = FastAPI()
 # Configure CORS to allow requests from frontend
 allowed_origins = os.getenv(
     "ALLOWED_ORIGINS", 
-    "http://localhost:3000,http://localhost:3001,http://localhost:5173"
+    "http://localhost:3000,http://localhost:3001,http://localhost:5173","https://polite-water-0897b7500.7.azurestaticapps.net","https://proud-dune-0e720f900.7.azurestaticapps.net"
 ).split(",")
 
 app.add_middleware(
