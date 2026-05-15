@@ -12,7 +12,8 @@ const msalConfig = {
     auth: {
         clientId: import.meta.env.VITE_MSAL_CLIENT_ID,
         authority: import.meta.env.VITE_MSAL_AUTHORITY,
-        redirectUri: "http://localhost:3000",
+        //redirectUri: "http://localhost:3000",
+        redirectUri: "https://polite-water-0897b7500.7.azurestaticapps.net/"
     },
     cache: {
         cacheLocation: "sessionStorage",
